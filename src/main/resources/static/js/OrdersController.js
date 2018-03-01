@@ -120,7 +120,7 @@ function loadOrders() {
 
 
                 var tabl = document.createElement('p');
-                var numberTable =""+ order.tableNumber;
+                var numberTable =""+ order[2];
                 var tble = document.createTextNode("Table # " + numberTable);
                 tabl.appendChild(tble);
 
@@ -140,7 +140,6 @@ function loadOrders() {
                 var tbdy = document.createElement('tbody');
                 for ( producto in order.orderAmountsMap) {
                     var tr = document.createElement('tr');
-                    console.log("SI ENTRÉ");
                     var td = document.createElement('td');
                     td.appendChild(document.createTextNode(producto.key));
                     tr.appendChild(td);
