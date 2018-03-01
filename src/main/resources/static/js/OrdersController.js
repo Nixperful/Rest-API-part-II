@@ -140,11 +140,11 @@ function loadOrders() {
                 for ( producto in list[order].orderAmountsMap) {
                     var tr = document.createElement('tr');
                     var td = document.createElement('td');
-                    td.appendChild(document.createTextNode(producto.key));
+                    td.appendChild(document.createTextNode(producto));
                     tr.appendChild(td);
 
                     var td = document.createElement('td');
-                    td.appendChild(document.createTextNode(producto));
+                    td.appendChild(document.createTextNode(list[order].orderAmountsMap[producto]));
                     tr.appendChild(td);
                     tbdy.appendChild(tr);
                 }
