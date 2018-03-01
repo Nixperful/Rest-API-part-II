@@ -121,7 +121,7 @@ function loadOrders() {
 
 
                 var tabl = document.createElement('p');
-                var tble = document.createTextNode("Table # " + order.table_id.toString());
+                var tble = document.createTextNode("Table # " + order.table_id.toString);
                 tabl.appendChild(tble);
 
 
