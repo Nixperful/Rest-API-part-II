@@ -138,11 +138,11 @@ function loadOrders() {
                 tr.appendChild(th2);
                 ord.appendChild(tr);
                 var tbdy = document.createElement('tbody');
-                for (var i = 0; i < info.products.length; i++) {
+                for (var i = 0; i < order.orderAmountsMap.length; i++) {
                     var tr = document.createElement('tr');
 
                     var td = document.createElement('td');
-                    td.appendChild(document.createTextNode(order.products[i].product));
+                    td.appendChild(document.createTextNode(order.orderAmountsMap[i].product));
                     tr.appendChild(td);
 
                     var td = document.createElement('td');
