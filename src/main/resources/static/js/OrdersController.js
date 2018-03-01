@@ -96,7 +96,7 @@ function removeOrderById(id) {
 function loadOrders() {
     
     list = [];
-    axios.get('https://restauranteci2018.herokuapp.com/')
+    axios.get('https://restauranteci2018.herokuapp.com/orders')
         .then(function (response) {
             /*
             list = result.data;
