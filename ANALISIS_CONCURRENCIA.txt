@@ -1,0 +1,6 @@
+Se puede presentar una condición de carrera en caso que se desee hacer una modificación, o liberación
+a alguna orden, mientras que otro desea consultar, puede que lo que se obtenga después de la consulta
+sean datos que ya fueron modificados o datos erroneos; de igual manera puede ocurrir que se estén
+modificando la misma Orden, o en caso extremo, que se desee eliminar mientras que otro lo esté usando.
+Al existir N hilos que están funcionando de forma concurrente, es necesario evitar estas situaciones,
+ya que entre más usuarios se tengan más problable es que pasen estas condiciones de carrera.  
