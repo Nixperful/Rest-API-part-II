@@ -121,7 +121,7 @@ function loadOrders() {
 
 
                 var tabl = document.createElement('p');
-                var tble = document.createTextNode("Table # " + order.table_id);
+                var tble = document.createTextNode("Table # " + order.tableNumber.toString);
                 tabl.appendChild(tble);
 
 
@@ -142,11 +142,11 @@ function loadOrders() {
                     var tr = document.createElement('tr');
 
                     var td = document.createElement('td');
-                    td.appendChild(document.createTextNode(info.products[i].product));
+                    td.appendChild(document.createTextNode(order.products[i].product));
                     tr.appendChild(td);
 
                     var td = document.createElement('td');
-                    td.appendChild(document.createTextNode(info.products[i].quantity));
+                    td.appendChild(document.createTextNode(order.products[i].quantity));
                     tr.appendChild(td);
                     tbdy.appendChild(tr);
                 }
