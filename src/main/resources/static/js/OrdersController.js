@@ -100,7 +100,7 @@ function loadOrders() {
             list = response.data;
             document.getElementById('tableMenu').innerHTML = "";
             for (order in list) {
-                console.log(order);
+                console.log(order.tableNumber);
                 var ordersTable = document.getElementById('tableMenu');
                 var ord = document.createElement('table');
                 ord.style.width = '100%';
