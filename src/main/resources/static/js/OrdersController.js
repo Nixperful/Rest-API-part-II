@@ -100,8 +100,7 @@ function loadOrders() {
         .then(function (response) {
             
             list = response.data;
-            document.getElementById('tableMenu').empty();
-            
+            document.getElementById('tableMenu').removeChild;
             for (order in list) {
                 var ordersTable = document.getElementById('tableMenu');
                 var ord = document.createElement('table');
