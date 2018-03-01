@@ -95,12 +95,11 @@ function removeOrderById(id) {
 
 function loadOrders() {
     
-    list = [];
     axios.get('https://restauranteci2018.herokuapp.com/orders')
         .then(function (response) {
             
             list = response.data;
-            document.getElementById('tableMenu').removeChild;
+            document.getElementById('tableMenu').innerHTML = "";
             for (order in list) {
                 var ordersTable = document.getElementById('tableMenu');
                 var ord = document.createElement('table');
@@ -121,7 +120,8 @@ function loadOrders() {
 
 
                 var tabl = document.createElement('p');
-                var tble = document.createTextNode("Table # " + order.tableNumber);
+                var numberTable = order.tableNumber.toString; 
+                var tble = document.createTextNode("Table # " + numberTable);
                 tabl.appendChild(tble);
 
 
@@ -142,11 +142,11 @@ function loadOrders() {
                     var tr = document.createElement('tr');
 
                     var td = document.createElement('td');
-                    td.appendChild(document.createTextNode(order.orderAmountsMap[i].product));
+                    td.appendChild(document.createTextNode(order.orderAmountsMap[i].key));
                     tr.appendChild(td);
 
                     var td = document.createElement('td');
-                    td.appendChild(document.createTextNode(order.products[i].quantity));
+                    td.appendChild(document.createTextNode(order.orderAmountsMap[i]));
                     tr.appendChild(td);
                     tbdy.appendChild(tr);
                 }
