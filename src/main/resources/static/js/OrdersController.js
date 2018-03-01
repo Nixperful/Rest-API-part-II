@@ -95,7 +95,7 @@ function removeOrderById(id) {
 
 function loadOrders() {
     
-    axios.get('https://restauranteci2018.herokuapp.com/orders')
+    axios.get('/orders')
         .then(function (response) {
             list = response.data;
             document.getElementById('tableMenu').innerHTML = "";
