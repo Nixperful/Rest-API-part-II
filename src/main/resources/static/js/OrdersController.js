@@ -98,7 +98,7 @@ function loadOrders() {
     list = [];
     axios.get('https://restauranteci2018.herokuapp.com/orders')
         .then(function (response) {
-            /*
+            
             list = result.data;
             document.getElementById('tableMenu').empty();
             
@@ -156,7 +156,7 @@ function loadOrders() {
                 ordersTable.appendChild(tags);
                 ordersTable.appendChild(tabl);
                 ordersTable.appendChild(ord);
-            }*/
+            }
             
         })
         .catch(function (error) {
