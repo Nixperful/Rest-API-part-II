@@ -100,7 +100,6 @@ function loadOrders() {
             list = response.data;
             document.getElementById('tableMenu').innerHTML = "";
             for (order in list) {
-                console.log(order.orderAmountsMap[0]);
                 var ordersTable = document.getElementById('tableMenu');
                 var ord = document.createElement('table');
                 ord.style.width = '100%';
@@ -120,8 +119,8 @@ function loadOrders() {
 
 
                 var tabl = document.createElement('p');
-                var numberTable =""+ order[2];
-                var tble = document.createTextNode("Table # " + numberTable);
+                var numberTable = "" + list[order].tableNumber;
+                var tble = document.createTextNode("Table # " + numberTable );
                 tabl.appendChild(tble);
 
 
@@ -138,7 +137,7 @@ function loadOrders() {
                 tr.appendChild(th2);
                 ord.appendChild(tr);
                 var tbdy = document.createElement('tbody');
-                for ( producto in order.orderAmountsMap) {
+                for ( producto in list[order].orderAmountsMap) {
                     var tr = document.createElement('tr');
                     var td = document.createElement('td');
                     td.appendChild(document.createTextNode(producto.key));
