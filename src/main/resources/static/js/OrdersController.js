@@ -99,7 +99,7 @@ function loadOrders() {
     axios.get('https://restauranteci2018.herokuapp.com/orders')
         .then(function (response) {
             
-            list = result.data;
+            list = response.data;
             document.getElementById('tableMenu').empty();
             
             for (order in list) {
