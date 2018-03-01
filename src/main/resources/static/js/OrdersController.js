@@ -138,15 +138,15 @@ function loadOrders() {
                 tr.appendChild(th2);
                 ord.appendChild(tr);
                 var tbdy = document.createElement('tbody');
-                for (var i = 0; i < order.orderAmountsMap.length; i++) {
+                for ( producto in order.orderAmountsMap) {
                     var tr = document.createElement('tr');
 
                     var td = document.createElement('td');
-                    td.appendChild(document.createTextNode(order.orderAmountsMap[i].key));
+                    td.appendChild(document.createTextNode(producto.key));
                     tr.appendChild(td);
 
                     var td = document.createElement('td');
-                    td.appendChild(document.createTextNode(order.orderAmountsMap[i]));
+                    td.appendChild(document.createTextNode(producto));
                     tr.appendChild(td);
                     tbdy.appendChild(tr);
                 }
